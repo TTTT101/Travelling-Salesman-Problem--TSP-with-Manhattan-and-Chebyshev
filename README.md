@@ -11,15 +11,49 @@ In this post, I am using heuristic - nearest neighbor method - by applying Manha
 2. Chebyshev Metric calculates the distance between two points based on the maximum of the absolute deltas of their coordinates. It's used when diagonal movement is allowed.
 3. Improvement Heuristics can modify an existing solution to improve its quality. The techniques are 2-opt, 3-opt, k-opt by swapping, removing or reconnecting the edges. I am using 2-opt for this example.
 
-## Data Description
+The end results sugest the routes when applying Manhattan or Chebyshev metrices and how we can improve them.
 
+## Data Description
+The data table shows nodes coordinates in which 0 represent a depot and the rest are customers' locations. Find the tour that starts at depot then visits all the customers and return back to depot. We are going to use two Heuristics approaches, which are Nearest Neighbor and Cheapest Insertion to find the optima solutions.
+
+(1) Assumming that the cost to travel between any pair of nodes is conducted by the Manhattan metric.
+(2) Assumming that the cost to travel between any pair of nodes is conducted by the Chebyshev metric.
+(3) Apply 2-opt Improvement technique to find the new set of solutions.
 
 <img width="183" alt="image" src="https://github.com/user-attachments/assets/ce194d52-3574-4909-9064-e181e7aa43c6" />
 
-
-## Network Design Visualization
-
 ## Algorithm Implementation
 
+I am going to use pandas, numpy and matplotlib.pyplot for this example. Here is step by step how we implement the logic.
+
+	1.	Distance Calculation:
+	•	Two distance matrices are created. These matrices represent the cost of traveling between nodes using the respective metrics:
+	•	l1_distances for Manhattan (L1 norm).
+	•	lmax_distances for Chebyshev (L∞ norm).
+
+	2.	Heuristic Methods:
+	•	Nearest Neighbor (NN):
+	•	Selects the nearest unvisited node at each step.
+	•	Used with both Manhattan and Chebyshev metrics.
+	•	Cheapest Insertion (CI):
+	•	Inserts nodes into an existing tour at the position that minimizes the increase in total cost.
+	•	Applied using both Manhattan and Chebyshev metrics.
+ 
+	3.	Tour Cost Calculation:
+	•	get_tour_cost calculates the total cost of a tour based on the chosen metric (Manhattan or Chebyshev).
+ 
+	4.	Improvement Method using 2-opt improvement:
+	•	A local search heuristic that attempts to optimize the current tour by swapping edges to reduce the tour length.
+	•	Implemented for tours generated using both metrics and heuristics (NN and CI).
+ 
+	5.	Output:
+	•	The total cost of the tour for the Nearest Neighbor and Cheapest Insertion heuristics using both Manhattan and Chebyshev metrics.
+	•	Improved tours using the 2-opt heuristic for all combinations of metrics and initial heuristics.
 
 ## Result
+
+![image](https://github.com/user-attachments/assets/8f49f594-b6d1-44c6-97a0-f907bf66ba3d)
+
+
+![image](https://github.com/user-attachments/assets/60c2cf66-92cf-41f4-8314-3125dfb8f7d5)
+
