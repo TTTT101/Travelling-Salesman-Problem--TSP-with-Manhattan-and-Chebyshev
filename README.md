@@ -14,7 +14,7 @@ In this post, I am using heuristic - nearest neighbor method - by applying Manha
 The end results sugest the routes when applying Manhattan or Chebyshev metrices and how we can improve them.
 
 ## Data Description
-The data table shows nodes coordinates in which 0 represent a depot and the rest are customers' locations. Find the tour that starts at depot then visits all the customers and return back to depot. We are going to use two Heuristics approaches, which are Nearest Neighbor and Cheapest Insertion to find the optima solutions.
+The data table shows nodes coordinates in which 0 represent a depot and the rest are customers' locations. Find the tour that starts at depot then visits all the customers and return back to depot. We are going to use three Heuristics approaches, which are Nearest Neighbor, Cheapest Insertion and then Improvement Heuristic:
 
 (1) Assumming that the cost to travel between any pair of nodes is conducted by the Manhattan metric.
 
