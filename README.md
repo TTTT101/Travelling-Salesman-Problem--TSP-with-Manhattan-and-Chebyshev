@@ -6,7 +6,7 @@ There are many approaches to solve TSP such as:
 2. Heuristic Methods: Nearest Neighbor, Cheapest Insertion, Minimum Spanning Tree, Improvement Heuristic.
 3. Metaheuristic Methods: Strategies that guide heuristic to escape the local optima to explore global optima solutions such as Simulated Annealing, Genetic algorithm, Ant Colony Optimization.
 
-In this post, I am using heuristic - nearest neighbor method - by applying Manhattan and Chebyshev metrices as distance measures. Then we will improve them.
+In this post, I am using heuristic by applying Manhattan and Chebyshev metrices as distance measures. Then we will improve them.
 1. Manhattan Metric is also known as Taxicab distance, calculate the distance between two points by summing the absolute deltas of their coordinates. it's often used when travelling in straight lines such as the grid-like street layout ot Manhattan (no diagonal).
 2. Chebyshev Metric calculates the distance between two points based on the maximum of the absolute deltas of their coordinates. It's used when diagonal movement is allowed.
 3. Improvement Heuristics can modify an existing solution to improve its quality. The techniques are 2-opt, 3-opt, k-opt by swapping, removing or reconnecting the edges. I am using 2-opt for this example.
