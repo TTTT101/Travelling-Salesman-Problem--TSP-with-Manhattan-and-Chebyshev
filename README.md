@@ -17,7 +17,9 @@ The end results sugest the routes when applying Manhattan or Chebyshev metrices 
 The data table shows nodes coordinates in which 0 represent a depot and the rest are customers' locations. Find the tour that starts at depot then visits all the customers and return back to depot. We are going to use two Heuristics approaches, which are Nearest Neighbor and Cheapest Insertion to find the optima solutions.
 
 (1) Assumming that the cost to travel between any pair of nodes is conducted by the Manhattan metric.
+
 (2) Assumming that the cost to travel between any pair of nodes is conducted by the Chebyshev metric.
+
 (3) Apply 2-opt Improvement technique to find the new set of solutions.
 
 <img width="183" alt="image" src="https://github.com/user-attachments/assets/ce194d52-3574-4909-9064-e181e7aa43c6" />
